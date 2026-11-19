@@ -1,0 +1,3 @@
+scenario,name,mode,total,live,cache,failed,live_success_pct,served_pct,avg_ms,p95_ms,max_ms,avg_attempts,breaker_state
+"S5","Service down (proxy mati)","naive",40,0,0,40,0,0,9,21,22,1,"-"
+"S5","Service down (proxy mati)","resilient",40,0,40,0,0,100,66,657,673,0.3,"OPEN"

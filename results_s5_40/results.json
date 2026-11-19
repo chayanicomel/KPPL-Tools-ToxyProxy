@@ -1,0 +1,37 @@
+{
+  "scenarios": [
+    {
+      "scenario": "S5",
+      "name": "Service down (proxy mati)",
+      "mode": "naive",
+      "total": 40,
+      "live": 0,
+      "cache": 0,
+      "failed": 40,
+      "live_success_pct": 0,
+      "served_pct": 0,
+      "avg_ms": 9,
+      "p95_ms": 21,
+      "max_ms": 22,
+      "avg_attempts": 1,
+      "breaker_state": "-"
+    },
+    {
+      "scenario": "S5",
+      "name": "Service down (proxy mati)",
+      "mode": "resilient",
+      "total": 40,
+      "live": 0,
+      "cache": 40,
+      "failed": 0,
+      "live_success_pct": 0,
+      "served_pct": 100,
+      "avg_ms": 66,
+      "p95_ms": 657,
+      "max_ms": 673,
+      "avg_attempts": 0.3,
+      "breaker_state": "OPEN"
+    }
+  ],
+  "recovery": null
+}

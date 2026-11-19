@@ -1,0 +1,9 @@
+{
+  "name": "toxiproxy-fault-tolerance",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "node tests/manual.js setup",
+    "experiment": "node tests/experiment.js"
+  }
+}

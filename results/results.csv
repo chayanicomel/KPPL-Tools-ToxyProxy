@@ -1,0 +1,13 @@
+scenario,name,mode,total,live,cache,failed,live_success_pct,served_pct,avg_ms,p95_ms,max_ms,avg_attempts,breaker_state
+"S0","Baseline (tanpa gangguan)","naive",10,10,0,0,100,100,12,21,21,1,"-"
+"S0","Baseline (tanpa gangguan)","resilient",10,10,0,0,100,100,20,88,88,1,"CLOSED"
+"S1","Latency ringan 300 ms","naive",10,10,0,0,100,100,307,418,418,1,"-"
+"S1","Latency ringan 300 ms","resilient",10,10,0,0,100,100,298,365,365,1,"CLOSED"
+"S2","Latency berat 2500 ms","naive",10,10,0,0,100,100,2509,2632,2632,1,"-"
+"S2","Latency berat 2500 ms","resilient",10,0,10,0,0,100,1092,3643,3643,0.9,"OPEN"
+"S3","Timeout / koneksi menggantung","naive",10,0,0,10,0,0,12,24,24,1,"-"
+"S3","Timeout / koneksi menggantung","resilient",10,0,10,0,0,100,232,944,944,0.9,"OPEN"
+"S4","Intermiten: reset 50%","naive",10,6,0,4,60,60,11,14,14,1,"-"
+"S4","Intermiten: reset 50%","resilient",10,8,2,0,80,100,311,702,702,2,"CLOSED"
+"S5","Service down (proxy mati)","naive",10,0,0,10,0,0,8,20,20,1,"-"
+"S5","Service down (proxy mati)","resilient",10,0,10,0,0,100,191,643,643,0.9,"OPEN"
